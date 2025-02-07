@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <title>Flashcard Matemática</title>
+</head>
+<body>
+    <header>
+        <h1><span class="material-symbols-outlined">calculate</span> Flashcards de Matemática <span class="material-symbols-outlined">calculate</span></h1>
+    </header>
+    <main>
+        <p>Este foi um projeto inicial de flashcards melhores para minha namorada, feito com carinho e amor pelo namorado dela, em prol de seus estudos.</p>
+        <section class="card">
+            <div class="title" onclick="clickShow()">
+                <h1>Questão Única</h1>
+            </div>
+            <div class="topic">
+                <div class="question">
+                    <p>
+                        Em uma maratona escolar, três equipes participaram e completaram uma corrida de revezamento. A <strong>Equipe A</strong> completou <strong><sup>3</sup>&frasl;<sub>8</sub></strong> do percurso, a <strong>Equipe B</strong> correu <strong><sup>1</sup>&frasl;<sub>3</sub></strong> da distância total, e a <strong>Equipe C</strong> percorreu <strong><sup>5</sup>&frasl;<sub>12</sub></strong>.
+                    </p>
+                    <img src="https://media.gettyimages.com/id/496719837/pt/foto/motiva%C3%A7%C3%A3o-combust%C3%ADveis-o-motor-de-humano.jpg?s=612x612&w=gi&k=20&c=2M7iEuS7xbqcGScJJ7Nw6RCMU5jYX6CNQ0qlVMEHQZI=" alt="Imagem de pessoas correndo">
+                    <p>
+                        Juntas, as três equipes percorreram mais do que o necessário. Quanto <strong>a mais</strong> elas correram em relação ao percurso total?
+                    </p>
+                    <ol>
+                        <li>A corrida foi completada exatamente.</li>
+                        <li>O percurso foi ultrapassado em <sup>1</sup>&frasl;<sub>24</sub>.</li>
+                        <li>O percurso foi ultrapassado em <sup>1</sup>&frasl;<sub>12</sub>.</li>
+                        <li>O percurso foi ultrapassado em <sup>1</sup>&frasl;<sub>8</sub>.</li>
+                    </ol>
+                </div>
+                <div class="unhide" onclick="clickAnswer()">
+                    <p>Mostrar/Esconder Resposta</p>
+                </div>
+                <div class="answer">
+                    <h1>Resposta correta era: A</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nam nihil, architecto corrupti consectetur eveniet omnis aspernatur ea optio, voluptas quo deleniti praesentium facere eligendi! Pariatur dolore voluptates cum aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo facilis tempora nisi odio! Nulla, quibusdam in veniam labore, blanditiis soluta sapiente necessitatibus est, saepe velit obcaecati officia quae quasi.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function clickAnswer(){
+            const answerDiv = document.querySelector('.answer');
+            if (answerDiv.style.display === 'block'){
+            answerDiv.style.display = 'none';
+            } else {
+            answerDiv.style.display = 'block';
+            }
+        }
+        
+        function clickShow(){
+            const topicDiv = document.querySelector('.topic');
+            if (topicDiv.style.display === 'block'){
+            topicDiv.style.display = 'none';
+            } else {
+            topicDiv.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
