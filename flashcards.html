@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
     <title>Flashcard Matemática</title>
+    
 </head>
 <body>
     <header>
         <h1><span class="material-symbols-outlined">calculate</span> Flashcards de Matemática <span class="material-symbols-outlined">calculate</span></h1>
     </header>
     <main>
-        <p>Este foi um projeto inicial de flashcards melhores para minha namorada, feito com carinho e amor pelo namorado dela, em prol de seus estudos.</p>
+        <h2>Bem-vindo(a) aos Flashcards de Matemática!</h2>
+        <p>Este projeto foi criado para ajudar você a estudar matemática de forma prática e interativa. Aqui, você encontra questões com explicações detalhadas, perfeitas para revisar conteúdos, testar seus conhecimentos e aprender no seu próprio ritmo.</p>
+        <p>Use esses flashcards para se preparar para provas, reforçar conceitos ou simplesmente desafiar sua mente. Vamos tornar a matemática mais clara e divertida!</p>
+        
+        <h1>Questões de Fração</h1>
         <section class="card">
-            <div class="title" onclick="clickShow()">
-                <h1>Questão Única</h1>
+            <div class="title" onclick="clickShow(this)">
+                <h1>Questão 1</h1>
             </div>
             <div class="topic">
                 <div class="question">
                     <p>
-                        Em uma maratona escolar, três equipes participaram e completaram uma corrida de revezamento. A <strong>Equipe A</strong> completou <strong><sup>3</sup>&frasl;<sub>8</sub></strong> do percurso, a <strong>Equipe B</strong> correu <strong><sup>1</sup>&frasl;<sub>3</sub></strong> da distância total, e a <strong>Equipe C</strong> percorreu <strong><sup>5</sup>&frasl;<sub>12</sub></strong>.
+                        Em uma maratona escolar, três equipes participaram e completaram uma corrida de revezamento. A <strong>Equipe A</strong> completou <strong><span class="fracao"><sup>3</sup><sub>8</sub></span></strong> do percurso, a <strong>Equipe B</strong> correu <strong><span class="fracao"><sup>1</sup><sub>3</sub></span></strong> da distância total, e a <strong>Equipe C</strong> percorreu <strong><span class="fracao"><sup>5</sup><sub>12</sub></span></strong>.
                     </p>
                     <img src="https://media.gettyimages.com/id/496719837/pt/foto/motiva%C3%A7%C3%A3o-combust%C3%ADveis-o-motor-de-humano.jpg?s=612x612&w=gi&k=20&c=2M7iEuS7xbqcGScJJ7Nw6RCMU5jYX6CNQ0qlVMEHQZI=" alt="Imagem de pessoas correndo">
                     <p>
@@ -29,38 +36,228 @@
                     </p>
                     <ol>
                         <li>A corrida foi completada exatamente.</li>
-                        <li>O percurso foi ultrapassado em <sup>1</sup>&frasl;<sub>24</sub>.</li>
-                        <li>O percurso foi ultrapassado em <sup>1</sup>&frasl;<sub>12</sub>.</li>
-                        <li>O percurso foi ultrapassado em <sup>1</sup>&frasl;<sub>8</sub>.</li>
+                        <li>O percurso foi ultrapassado em <span class="fracao"><sup>1</sup><sub>24</sub></span>.</li>
+                        <li>O percurso foi ultrapassado em <span class="fracao"><sup>1</sup><sub>12</sub></span>.</li>
+                        <li>O percurso foi ultrapassado em <span class="fracao"><sup>1</sup><sub>8</sub></span>.</li>
                     </ol>
                 </div>
-                <div class="unhide" onclick="clickAnswer()">
+                <div class="unhide" onclick="clickAnswer(this)">
                     <p>Mostrar/Esconder Resposta</p>
                 </div>
                 <div class="answer">
-                    <h1>Resposta correta era: A</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nam nihil, architecto corrupti consectetur eveniet omnis aspernatur ea optio, voluptas quo deleniti praesentium facere eligendi! Pariatur dolore voluptates cum aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo facilis tempora nisi odio! Nulla, quibusdam in veniam labore, blanditiis soluta sapiente necessitatibus est, saepe velit obcaecati officia quae quasi.</p>
+                    <h1>Resposta correta era: B</h1>
+                    <div class="explicacao">
+                        <p>
+                            Para resolver essa questão, precisamos somar as frações do percurso que cada equipe percorreu e comparar o total com o percurso completo (que equivale a 1).
+                        </p>
+                        <p>
+                            1. <strong>Equipe A</strong>: <span class="fracao"><sup>3</sup><sub>8</sub></span><br>
+                            2. <strong>Equipe B</strong>: <span class="fracao"><sup>1</sup><sub>3</sub></span><br>
+                            3. <strong>Equipe C</strong>: <span class="fracao"><sup>5</sup><sub>12</sub></span>
+                        </p>
+                        <p>
+                            Primeiro, encontramos o <strong>mínimo múltiplo comum (MMC)</strong> dos denominadores (8, 3 e 12), que é <strong>24</strong>. Em seguida, convertemos cada fração para ter o denominador 24:
+                        </p>
+                        <p class="fracao-especial">
+                            <span class="fracao">\(\frac{3}{8} = \frac{9}{24}\)</span><br>
+                            <span class="fracao">\(\frac{1}{3} = \frac{8}{24}\)</span><br>
+                            <span class="fracao">\(\frac{5}{12} = \frac{10}{24}\)</span>
+                        </p>
+                        <p>
+                            Agora, somamos as frações:
+                        </p>
+                        <p>
+                            \[
+                            \frac{9}{24} + \frac{8}{24} + \frac{10}{24} = \frac{27}{24}
+                            \]
+                        </p>
+                        <p>
+                            O percurso total é <span class="fracao"><sup>24</sup><sub>24</sub></span>, então a diferença é:
+                        </p>
+                        <p>
+                            \[
+                            \frac{27}{24} - \frac{24}{24} = \frac{3}{24} = \frac{1}{8}
+                            \]
+                        </p>
+                        <p>
+                            Portanto, as equipes percorreram <strong><span class="fracao"><sup>1</sup><sub>8</sub></span></strong> a mais do que o percurso total. A resposta correta é a alternativa <strong>B</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="title" onclick="clickShow(this)">
+                <h1>Questão 2</h1>
+            </div>
+            <div class="topic 2">
+                <div class="question">
+                    <p>
+                        <strong><a href="https://vestibular.brasilescola.uol.com.br/enem/operacoes-com-fracoes-no-enem.htm" target="_blank">(ENEM 2015)</a></strong> O polímero de PET (Politereftalato de Etileno) é um dos plásticos mais reciclados em todo o mundo devido à sua extensa gama de aplicações, entre elas, fibras têxteis, tapetes, embalagens, filmes e cordas. Os gráficos mostram o destino do PET reciclado no Brasil, sendo que, no ano de 2010, o total de PET reciclado foi de <strong>282 kton</strong> (quilotoneladas)..
+                    </p>
+                    <img src="https://s4.static.brasilescola.uol.com.br/img/2016/11/graficos-do-exemplo-1.jpg">
+                    <p>
+                        De acordo com os gráficos, a quantidade de embalagens PET recicladas destinadas à produção de tecidos e malhas, em kton, é mais aproximada de:
+                    </p>
+                    <ol>
+                        <li>16,0</li>
+                        <li>22,9</li>
+                        <li>32,0</li>
+                        <li>84,6</li>
+                        <li>106,6</li>
+                    </ol>
+                </div>
+                <div class="unhide" onclick="clickAnswer(this)">
+                    <p>Mostrar/Esconder Resposta</p>
+                </div>
+                <div class="answer">
+                    <h1>Resposta correta era: C</h1>
+                    <div class="explicacao">
+                        <p>
+                            Observe que a porcentagem destinada a tecidos e malhas é 30% dos usos finais têxteis, que, por sua vez, é uma porcentagem de <strong>37,8%</strong> de todos os usos finais. Sendo assim, precisaremos calcular <strong>30%</strong> de <strong>37,8%</strong> de <strong>282 kton</strong>. Esse cálculo pode ser expresso por multiplicações da seguinte maneira:
+                        </p>
+                        <p class="fracao-especial">
+                            \( 30\% \times 37{,}8\% \times 282 \)
+                        </p>
+                        <p>
+                            Para resolver essa questão, lembre-se de que uma porcentagem é uma fração de denominador <strong>100</strong>. Logo, podemos transformar a multiplicação acima na multiplicação de frações a seguir:
+                        </p>
+                        <p>
+                            \[
+                            \frac{30}{100} \times \frac{37,8}{100} \times \frac{282} = \frac{319788}{10000}
+                            \]
+                        </p>
+                        <p>
+                            Dividindo numerador por denominador, pois toda fração representa uma divisão, teremos:
+                        </p>
+                        <p>
+                            \[
+                            \frac{319788}{10000} = 31,9788
+                            \]
+                        </p>
+                        <p>
+                            Esse valor é aproximadamente 32 kton.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="title" onclick="clickShow(this)">
+                <h1>Questão 3</h1>
+            </div>
+            <div class="topic 3">
+                <div class="question">
+                    <p>
+                        <strong><a href="https://vestibular.brasilescola.uol.com.br/enem/operacoes-com-fracoes-no-enem.htm" target="_blank">(ENEM 2015)</a></strong> A expressão “Fórmula de Young” é utilizada para calcular a dose infantil de um medicamento, dada a dose do adulto:
+                    </p>
+                    <p>
+                        \[
+                        dose\ infantil = \frac{idade\ da\ criança}{idade\ da\ criança + 12} \times dose\ do\ adulto
+                        \]
+                    </p>
+                    <p>
+                        Uma enfermeira deve administrar um medicamento X a uma criança inconsciente, cuja dosagem de adulto é de 60 mg. A enfermeira não consegue descobrir onde está registrada a idade da criança no prontuário, mas identifica que, algumas horas antes, foi administrada a ela uma dose de 14 mg do medicamento Y, cuja dosagem de adulto é 42 mg. Sabe-se que a dose da medicação Y administrada à criança estava correta.
+                    </p>
+                    <p>
+                        Então, a enfermeira deverá ministrar uma dosagem do medicamento X, em miligramas, igual a
+
+
+                    </p>
+                    <ol>
+                        <li>15</li>
+                        <li>20</li>
+                        <li>30</li>
+                        <li>36</li>
+                        <li>40</li>
+                    </ol>
+                </div>
+                <div class="unhide" onclick="clickAnswer(this)">
+                    <p>Mostrar/Esconder Resposta</p>
+                </div>
+                <div class="answer">
+                    <h1>Resposta correta era: B</h1>
+                    <div class="explicacao">
+                        <p>
+                            Esse exercício envolverá uma multiplicação de frações, mas, antes, é preciso resolver equações. Para resolvê-lo, mudaremos a fórmula para facilitar a organização dos cálculos, portanto, C = dose da criança, i = Idade da criança e A = Dose do adulto.
+                        </p>
+                        <p>
+                            \[
+                            C = \frac{i}{i+12} \times 42
+                            \]
+                        </p>
+                        <p>
+                            Substituindo os valores conhecidos para o medicamento Y, teremos:
+                        </p>
+                        <p>
+                            \[
+                            14 = \frac{i}{i+12} \times 42
+                            \]
+                        </p>
+                        <p>
+                            Resolvendo a equação, teremos:
+                        </p>
+                        <p>
+                            \[
+                            (i+12)14 = i \times 42
+                            \]
+                            \[
+                            42i - 14i = 168
+                            \]
+                            \[
+                            28i = 168
+                            \]
+                            \[
+                            i = \frac{168}{28}
+                            \]
+                            \[
+                            i = 6
+                            \]
+                        </p>
+                        <p>
+                            Sabendo que a idade da criança é 6 anos, temos que:
+                        </p>
+                        <p>
+                            \[
+                            C = \frac{6}{6+12} \times 60
+                            \]
+                            \[
+                            C = \frac{6}{18} \times 60
+                            \]
+                        </p>
+                        <p>
+                            Observe que é necessário multiplicar uma fração por um número inteiro. Como todo número inteiro é uma fração de denominador 1, teremos:
+                        </p>
+                        <p>
+                            \[
+                            C = \frac{6}{18} \times \frac{60}{1} = \frac{360}{18}
+                            \]
+                        </p>
+                        <p>
+                            Dividindo numerador por denominador, encontraremos 20 mg como dosagem do medicamento X.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <script>
-        function clickAnswer(){
-            const answerDiv = document.querySelector('.answer');
+        function clickAnswer(element){
+            const answerDiv = element.parentElement.querySelector('.answer');
             if (answerDiv.style.display === 'block'){
-            answerDiv.style.display = 'none';
+                answerDiv.style.display = 'none';
             } else {
-            answerDiv.style.display = 'block';
+                answerDiv.style.display = 'block';
             }
         }
         
-        function clickShow(){
-            const topicDiv = document.querySelector('.topic');
+        function clickShow(element){
+            const topicDiv = element.parentElement.querySelector('.topic');
             if (topicDiv.style.display === 'block'){
-            topicDiv.style.display = 'none';
+                topicDiv.style.display = 'none';
             } else {
-            topicDiv.style.display = 'block';
+                topicDiv.style.display = 'block';
             }
         }
     </script>

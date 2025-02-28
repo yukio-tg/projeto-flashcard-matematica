@@ -9,7 +9,8 @@
 body{
     font-family: Arial, sans-serif;
     font-size: 1em;
-    background-color: #f0f0f0;
+    background-color: rgb(17, 17, 17);
+    color: white;
 }
 
 header{
@@ -33,7 +34,21 @@ header > h1 > span{
     transform: translate(0, 4px);
 }
 
+main > h1{
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+main > h2{
+    color: #cfcfcf;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 main > p{
+    color: #cfcfcf;
     margin: 10px 20px;
     text-align: center;
     text-indent: 1.5em;
@@ -48,9 +63,18 @@ section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.514);
     flex-direction: column;
     background-color: rgb(24, 24, 24);
-    color: white;
     border-radius: 6px;
     overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 187, 0);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgb(197, 145, 0);
 }
 
 div.title{
@@ -60,7 +84,6 @@ div.title{
     background-color: rgb(32, 32, 32);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
-    border: 2px solid rgb(59, 59, 59);
 }
 
 div.title:hover{
@@ -140,13 +163,41 @@ div.answer > h1{
     text-decoration: underline;
 }
 
-div.answer > p{
-    font-size: .9em;
+div.explicacao{
     margin: 0 20px;
     padding: 10px;
     background-image: linear-gradient(to top, rgba(255, 249, 218, 0.418), rgba(255, 249, 216, 0.726));
     border-radius: 5px;
     box-shadow: 0 0 4px rgba(255, 249, 216, 0.726);
+}
+
+div.explicacao > p{
+    font-size: .9em;
+    margin: 10px 0;
+}
+
+.fracao {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2em;
+}
+.fracao sup, .fracao sub {
+    display: block;
+    font-size: 0.8em;
+    line-height: 1;
+}
+
+.fracao sup {
+    border-bottom: 1px solid white;
+}
+
+div.explicacao > p > .fracao sup {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.fracao-especial {
+    text-align: center;
 }
 
 div.answer > img{
